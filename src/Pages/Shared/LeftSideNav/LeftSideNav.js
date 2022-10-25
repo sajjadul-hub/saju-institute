@@ -1,6 +1,6 @@
-import {Image}from'react-bootstrap'
+// import {Image}from'react-bootstrap'
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Card from '../Card/Card';
 const LeftSideNav = () => {
     const [categories, setCategories] = useState([]);

@@ -7,12 +7,12 @@ const Home = () => {
     const allNews=useLoaderData();
     return (
         <div>
-            {/* <h2>Dragon News Home: {allNews.length}</h2> */}
-       {/* {
+            <h2 className='mb-5'>Introduction of all courses</h2> 
+        {
 allNews.map(news=><NewsSummary key={news._id}
 news={news}
 ></NewsSummary>)
-       } */}
+       }
         </div>
     );
 };

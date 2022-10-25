@@ -30,7 +30,7 @@ const Login = () => {
     })
   }
     return (
-        <Form className='s bg-light p-3 rounded w-75' onSubmit={hanleSubmit}>
+        <Form className='ms-5 shadow-lg bg-light p-3 rounded w-75' onSubmit={hanleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control name='email' type="email" placeholder="Enter email" required />

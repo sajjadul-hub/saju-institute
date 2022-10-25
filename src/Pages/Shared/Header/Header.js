@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import LeftSideNav from '../LeftSideNav/LeftSideNav';
-import { FaMoon, FaUser } from 'react-icons/fa';
-
+import { FaUser } from 'react-icons/fa';
+import { createContext, useState } from "react";
+import ReactSwitch from "react-switch";
+import Switch from "react-switch";
+export const ThemeContext = createContext(null);
 const Header = () => {
   const {user,logOut}=useContext(AuthContext);
    const handleLogOut=()=>{
@@ -15,21 +18,26 @@ const Header = () => {
     .then(()=>{})
     .catch(error=>console.error(error))
    }
+   const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
   return (
         <Navbar collapseOnSelect className='mb-4' expand="lg" style={{backgroundColor:"#4ade80"}} variant="">
         <Container>
           <Image roundedCircle className='me-3' style={{height:"40px"}} src="https://codingblog.online/static/images/logo.png"/>
-          <Navbar.Brand><Link className='text-decoration-none fw-bolder fs-2 ' to='/'>Codeemy</Link></Navbar.Brand>
+          <Navbar.Brand><Link className='text-decoration-none fw-bolder fs-2 ' to='/cover'>Codeemy</Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link ><Link className='text-decoration-none text-dark fw-bold fs-5'>All Course</Link></Nav.Link>
+              <Nav.Link ><Link to='/' className='text-decoration-none text-dark fw-bold fs-5'>All Course</Link></Nav.Link>
               <Nav.Link><Link className='text-decoration-none text-dark fw-bold fs-5' to='/blog'>Blog</Link></Nav.Link>
             </Nav>
             <Nav>
              {
               user?.photoURL?
-              <Image className='mt-1' src={user?.photoURL} roundedCircle style={{height:'30px'}}></Image>
+              <Image className='mt-3' src={user?.photoURL} roundedCircle style={{height:'30px'}}></Image>
               :
               <FaUser className='mt-2 me-2 fs-5'></FaUser>
              }
@@ -37,7 +45,7 @@ const Header = () => {
                {
                 user?.uid?
                 <><span>{user?.displayName}</span>
-                <button onClick={handleLogOut} className='ms-2 bg-primary text-light border-0 p-1 rounded'>Log Out</button>
+                <button onClick={handleLogOut} style={{backgroundColor:"#16a34a"}} className='mx-3 px-2 py-2 rounded text-light text-decoration-none border-0'>Log Out</button>
                 </>
                 :
                 <>
@@ -50,9 +58,14 @@ const Header = () => {
                }
               
               </Nav.Link>
-              <Nav.Link eventKey={2}>
-                <FaMoon className='mb-1 fs-5'></FaMoon>
-              </Nav.Link>
+              <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div id={theme}>
+        <div className="switch">
+          <label className='me-3 mt-3s'> {theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+        </div>
+      </div>
+    </ThemeContext.Provider>
             </Nav>
             <div className='d-lg-none'>
                 <LeftSideNav></LeftSideNav>

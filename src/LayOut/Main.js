@@ -8,19 +8,21 @@ import RightSidNav from '../Pages/Shared/RightSidNav/RightSidNav';
 
 const Main = () => {
     return (
-      <div>
+      <div style={{backgroundColor:"rgb(226 232 240)"}}>
         <Header></Header>
           <Container>
             <Row>
-                <Col lg='2' className='d-none d-lg-block'>
-                   <LeftSideNav></LeftSideNav>
+            <Col lg='3'>
+                    <RightSidNav></RightSidNav>
                 </Col>
+           
                 <Col lg='7'>
                     <Outlet></Outlet>
                 </Col>
-                <Col lg='3'>
-                    <RightSidNav></RightSidNav>
-                </Col>
+                  <Col lg='2' className='d-none d-lg-block'>
+                   <LeftSideNav></LeftSideNav>
+                </Col> 
+                
             </Row>
         </Container>
         <Footer></Footer>

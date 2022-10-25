@@ -47,7 +47,7 @@ const Register = () => {
     setAccepted(event.target.checked);
   };
   return (
-    <Form className='s bg-light p-3 rounded w-75' onSubmit={hanleSubmit}>
+    <Form className='shadow-lg bg-light p-3 rounded w-75 ms-5' onSubmit={hanleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Your Name</Form.Label>
         <Form.Control type="text" name='name' placeholder="Your Name" />
