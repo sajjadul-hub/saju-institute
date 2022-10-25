@@ -39,7 +39,6 @@ const NewsSummary = ({ course }) => {
                 <span>{rating?.number}</span>
                 </div>
                 <div>
-                    <FaEye className='me-2'></FaEye>
                     <span>
                         {total_view}
                     </span>

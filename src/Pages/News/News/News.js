@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { FaEye } from 'react-icons/fa';
+import { FaEye, FaStar } from 'react-icons/fa';
 const News = () => {
     const news=useLoaderData();
     const {title,details, category_id,image_url,rating}=news;
@@ -12,7 +12,7 @@ const News = () => {
         <Card.Body>
          <div className='d-flex justify-content-between '>
          <div className='d-flex mb-2 '>
-            <small><FaEye className='me-1 mb-1'></FaEye></small>
+         <FaStar className='text-warning me-2 mt-1 '></FaStar>
  <small>{rating?.number}</small>
           </div>
           <p>Enroll lest date: {rating?.date}</p>
