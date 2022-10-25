@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
-import { FaEye, FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
+import {FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
 const NewsSummary = ({ course }) => {
     const { _id, title, image_url, author, details,rating, total_view } = course;
     return (

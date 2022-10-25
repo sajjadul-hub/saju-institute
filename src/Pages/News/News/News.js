@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { FaEye, FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 const News = () => {
     const news=useLoaderData();
     const {title,details, category_id,image_url,rating}=news;
