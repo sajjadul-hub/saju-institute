@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import News from '../../News/News/News';
 import NewsSummary from '../../Shared/NewsSummaryCard/NewsSummary';
 
 const Home = () => {
