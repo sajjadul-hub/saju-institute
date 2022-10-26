@@ -78,3 +78,14 @@ This  site about programming language course learning site .there are some cours
 In this site I use react to make it.And include AuthProvider.
 
 ### `3rd step`
+
+This  site live link :[https://codeemy-1f43f.web.app/cover](https://codeemy-1f43f.web.app/cover)
+whish deployment in firebase .
+
+### `4th step `
+
+Codeemy client code link :[https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Talimul212](https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Talimul212)
+
+### `5th step`
+
+Codeemy server link :[https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Talimul212](https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Talimul212)
