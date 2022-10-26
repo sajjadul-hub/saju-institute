@@ -3,8 +3,9 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
 import {FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
-const NewsSummary = ({ course }) => {
-    const { _id, title, image_url, author, details,rating, total_view } = course;
+import News from '../../News/News/News';
+const NewsSummary = ({ news }) => {
+    const { _id, title, image_url, author, details,rating, total_view } = news;
     return (
         <Card className="border-0 mb-5">
             <Card.Header style={{backgroundColor:"rgb(187 247 208)"}} className='d-flex justify-content-between align-items-center'>

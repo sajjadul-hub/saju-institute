@@ -6,7 +6,7 @@ const Category = () => {
     return (
         <div>
             {
-                categoryCourse.map(course=><NewsSummary key={course._id} course={course}></NewsSummary>)
+                categoryCourse.map(news=><NewsSummary key={news._id} news={news}></NewsSummary>)
             }
         </div>
     );
