@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
 import {FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
-import News from '../../News/News/News';
 const NewsSummary = ({ news }) => {
     const { _id, title, image_url, author, details,rating, total_view } = news;
     return (
